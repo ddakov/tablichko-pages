@@ -3,116 +3,181 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Табличко – Политика за поверителност / Privacy Policy</title>
-<meta name="description" content="Политика за поверителност на приложението Табличко. Privacy policy of the Tablichko app.">
+<title>Табличко / Times Table Quest – Политика за поверителност / Privacy Policy</title>
+<meta name="description" content="Политика за поверителност на приложението Табличко (на английски: Times Table Quest). Privacy policy of the Times Table Quest app (in Bulgarian: Табличко).">
 <style>
-  :root { --bg:#fff8e8; --card:#ffffff; --ink:#2b2d42; --muted:#5a5d73; --accent:#1b6ca8; --line:#e6dcc4; }
+  :root { --bg:#fff8e8; --card:#ffffff; --ink:#2b2d42; --muted:#5a5d73; --accent:#1b6ca8; --line:#e6dcc4; --on-accent:#ffffff; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#17181f; --card:#20222c; --ink:#eef0f6; --muted:#aab0c4; --accent:#7ec0f2; --line:#34374a; }
+    :root { --bg:#17181f; --card:#20222c; --ink:#eef0f6; --muted:#aab0c4; --accent:#7ec0f2; --line:#34374a; --on-accent:#10131a; }
   }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--ink);
          font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
   main { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
-  h1 { font-size:1.8rem; margin:.2em 0 .1em; }
+  h1 { font-size:1.8rem; line-height:1.25; margin:.2em 0 .1em; overflow-wrap:anywhere; }
   h2 { font-size:1.2rem; margin:1.6em 0 .3em; }
   section { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:8px 20px 20px; margin:20px 0; }
-  a { color:var(--accent); }
+  a { color:var(--accent); overflow-wrap:anywhere; }
   .meta { color:var(--muted); font-size:.9rem; }
-  nav { display:flex; gap:12px; margin:8px 0 0; }
-  nav a { padding:6px 12px; border:1px solid var(--line); border-radius:999px; text-decoration:none; background:var(--card); }
+  .links { margin-top:1.4em; padding-top:.8em; border-top:1px solid var(--line); font-size:.95rem; }
+  .langs { display:flex; flex-wrap:wrap; gap:10px; margin:8px 0 0; }
+  .langs button { font:inherit; font-weight:600; min-height:44px; padding:6px 18px; border:2px solid var(--accent);
+                  border-radius:999px; background:var(--card); color:var(--accent); cursor:pointer; }
+  .langs button[aria-pressed="true"] { background:var(--accent); color:var(--on-accent); }
+  .langs button:focus-visible, a:focus-visible { outline:3px solid var(--ink); outline-offset:2px; }
   li { margin:.3em 0; }
+  ul { padding-left: 1.2em; }
+  /* Without JavaScript both languages are shown one after the other. */
+  .js section[hidden] { display:none; }
 </style>
+<script>document.documentElement.className = 'js';</script>
 </head>
 <body>
 <main>
-<nav aria-label="Language / Език"><a href="#bg">Български</a><a href="#en">English</a><a href="../support/">Поддръжка / Support</a></nav>
+<nav class="langs" aria-label="Език / Language">
+  <button type="button" data-set="bg" aria-pressed="false">Български</button>
+  <button type="button" data-set="en" aria-pressed="false">English</button>
+</nav>
 
 <section id="bg" lang="bg">
   <h1>Политика за поверителност – Табличко</h1>
-  <p class="meta">Последна промяна: 13 октомври 2026 г.</p>
+  <p class="meta">Последна промяна: 30 октомври 2026 г.</p>
 
-  <p>„Табличко“ е образователно приложение на български език за упражняване на таблицата за умножение и на деленето. Приложението е направено така, че <strong>ние да не събираме лични данни</strong>: няма акаунти, реклами, анализи и проследяване.</p>
+  <p>„Табличко“ (на английски: <em>Times Table Quest</em>) е образователно приложение за упражняване на таблицата за умножение и на деленето, на български и на английски. Приложението е направено така, че <strong>ние, разработчикът, да не събираме и да не получаваме лични данни</strong>: няма акаунти, реклами, анализи и проследяване. Покупките минават през App Store или Google Play, които обработват собствени данни по свои правила – описано е по-долу.</p>
 
   <h2>Накратко</h2>
   <ul>
     <li>Няма регистрация, акаунт или вход.</li>
-    <li>Няма собствен сървър (backend), който да управляваме.</li>
-    <li>Няма реклами, анализи, проследяване и външни рекламни или аналитични услуги.</li>
-    <li>Не събираме, не получаваме и не продаваме лични данни от потребителите, включително от деца.</li>
-    <li>Напредъкът се пази само на устройството.</li>
+    <li>Няма собствен сървър (backend), който да управляваме, и приложението не изпраща данни към нас.</li>
+    <li>Няма реклами, анализи, проследяване и външни рекламни или аналитични услуги в приложението.</li>
+    <li>Не продаваме и не споделяме данни от потребителите, включително от деца.</li>
+    <li>Напредъкът и изборът на език се пазят само на устройството.</li>
+    <li>Покупката се обработва от Apple (iPhone/iPad) или Google (Android). Те могат да обработват технически данни и данни за покупката – виж „Покупка“ по-долу.</li>
   </ul>
 
   <h2>Какво се пази на устройството</h2>
-  <p>В локалното хранилище на приложението на твоето устройство се пазят: резултатите от упражненията (брой верни и грешни отговори по примери, изиграни игри, последна дата на игра), поредните дни, звездите и значките, отключените таблици, състоянието на 14-дневното предизвикателство, напредъкът по деленето и отметка, че предложението за „Пълна версия“ вече е показвано автоматично. Приложението не пита и не пази име, имейл, снимки, местоположение или друг идентификатор. Тези данни не се изпращат към нас или към трети страни.</p>
+  <p>В локалното хранилище на приложението на твоето устройство се пазят: резултатите от упражненията (брой верни и грешни отговори по примери, изиграни игри, последна дата на игра), поредните дни, звездите и значките, отключените таблици, състоянието на 14-дневното предизвикателство, напредъкът по деленето, избраният език на приложението (Автоматично, Български или English) и отметка, че предложението за „Пълна версия“ вече е показвано автоматично. Приложението не пита и не пази име, имейл, снимки, местоположение или друг идентификатор. Тези данни не се изпращат към нас или към трети страни от самото приложение.</p>
 
-  <h2>Покупка „Пълна версия“ и Apple</h2>
-  <p>„Пълна версия“ е еднократна покупка (без абонамент), направена чрез Apple In-App Purchase. Покупката, плащането, твоят Apple ID и платежните ти данни се обработват изцяло от Apple; ние нямаме достъп до тях. За самата покупка важат условията и политиката за поверителност на Apple.</p>
-  <p>Проверките на покупката (при стартиране, при връщане в приложението и при „Възстанови покупка“) се правят през Apple StoreKit. Приложението не пази собствено копие от покупката; държи само информацията, която StoreKit предоставя на устройството. Ние не получаваме тези данни.</p>
-  <p>Различаваме данните, които Apple обработва заради покупката, от данните, които събираме ние: ние не събираме нищо. Чрез App Store Connect Apple ни предоставя обобщени отчети за продажби и изтегляния, които не ни позволяват да те идентифицираме. Ако на устройството си си разрешил споделяне на диагностика с разработчиците на приложения, Apple може да ни предостави обобщени, анонимни отчети за сривове.</p>
+  <h2>Покупка „Пълна версия“</h2>
+  <p>„Пълна версия“ е еднократна покупка (без абонамент). Тя се прави през магазина на платформата: <strong>Apple In-App Purchase</strong> на iPhone и iPad или <strong>Google Play Billing</strong> на Android. Плащането, твоят Apple ID или Google акаунт и платежните ти данни се обработват изцяло от Apple или Google; ние нямаме достъп до тях. За самата покупка важат условията и политиките за поверителност на Apple и на Google.</p>
+  <p><strong>iPhone и iPad:</strong> покупката се проверява през Apple StoreKit при стартиране, при връщане в приложението и при „Възстанови покупка“. Приложението не пази собствено копие от покупката; използва само информацията, която StoreKit предоставя на устройството.</p>
+  <p><strong>Android:</strong> приложението използва библиотеката Google Play Billing. Тя разговаря с Google Play на устройството, за да покаже цената, да направи покупката и да я провери. Приложението чете от Google Play идентификатора на покупката (purchase token), за да я потвърди (acknowledge) пред Google и да отключи пълната версия. Не изпращаме този идентификатор на наш сървър: нямаме такъв, и покупката не се проверява от наша страна извън устройството.</p>
+  <p><strong>Телеметрия на магазините.</strong> Apple и Google са операторите на магазините и на своите библиотеки за плащане. Те могат да обработват технически данни и данни за покупката (например информация за устройството, версията на приложението, състояние на покупката и диагностика), за да осигурят плащането, да предотвратяват измами и да поддържат услугите си. Тази обработка е тяхна, става по техните политики и ние не я управляваме и не получаваме тези данни. Затова не твърдим, че „няма никакви данни“ – твърдим, че <em>ние</em> не събираме и не получаваме лични данни от приложението.</p>
+  <p>Какво получаваме ние: обобщени отчети от App Store Connect и Google Play Console (продажби, изтегляния, държави и подобни обобщени числа), които не ни позволяват да те идентифицираме. Ако на устройството си си разрешил споделяне на диагностика с разработчиците на приложения, Apple и Google могат да ни предоставят обобщени, анонимни отчети за сривове и проблеми в работата.</p>
 
   <h2>Интернет връзка</h2>
-  <p>За да играеш, не е нужна интернет връзка, а самото приложение не изпраща данни към нас. Интернет връзка се използва от Apple StoreKit, за да се покаже цената, да се направи покупка и да се възстанови покупка. Тази комуникация е между устройството ти и Apple.</p>
+  <p>За да играеш, не е нужна интернет връзка, а самото приложение не изпраща данни към нас. Интернет връзка се използва от Apple StoreKit или Google Play, за да се покаже цената, да се направи покупка и да се възстанови покупка. Тази комуникация е между устройството ти и Apple или Google.</p>
 
-  <h2>Изтриване на данните и деинсталиране</h2>
-  <p>В приложението няма бутон за нулиране на напредъка. Изтриването на приложението от устройството премахва локално записания напредък от устройството (iOS изтрива данните на приложението при деинсталиране). Ако преинсталираш приложението, започваш отначало. Ако използваш резервно копие на устройството (например iCloud Backup), данните на приложението могат да са част от копието и да се върнат при възстановяване от него; това се управлява от настройките на Apple на устройството ти.</p>
-  <p>Покупката не се изтрива заедно с приложението: тя е свързана с твоя Apple ID. След преинсталиране натисни „Възстанови покупка“, за да я проверим през Apple.</p>
+  <h2>Резервни копия, изтриване и деинсталиране</h2>
+  <p>В приложението няма бутон за нулиране на напредъка. Изтриването на приложението от устройството премахва локално записания напредък (на Android можеш да изчистиш и „Данни“ на приложението от настройките). Ако преинсталираш приложението, започваш отначало.</p>
+  <p>Ако използваш резервно копие на устройството (iCloud Backup на iPhone или резервно копиране в Google на Android), данните на приложението могат да са част от копието и да се върнат при възстановяване от него; това се управлява от настройките на Apple или Google на устройството ти, не от нас.</p>
+  <p>Покупката не се изтрива заедно с приложението: тя е свързана с твоя Apple ID или Google акаунт. След преинсталиране натисни „Възстанови покупка“, за да се провери през магазина.</p>
 
   <h2>Деца</h2>
-  <p>Приложението е образователно и може да се използва от деца заедно с родител или настойник. Не събираме информация от деца, не показваме реклами и не споделяме данни с трети страни. Покупките се правят чрез акаунта на Apple на устройството; родителите могат да ги управляват с настройките на Apple (например „Попитай, за да купиш“ и екранно време).</p>
+  <p>Приложението е образователно и може да се използва от деца заедно с родител или настойник. Не събираме информация от деца, не показваме реклами и не споделяме данни с трети страни. Покупките се правят чрез акаунта на Apple или Google на устройството; родителите могат да ги управляват с настройките на магазина (например „Попитай, за да купиш“ и екранно време при Apple, или родителски контрол и одобрение на покупки в Google Play).</p>
 
   <h2>Твоите права</h2>
-  <p>Тъй като не държим лични данни, при нас няма какво да се преглежда, поправя или изтрива. Локалните данни можеш да премахнеш по всяко време, като изтриеш приложението.</p>
+  <p>Тъй като не държим лични данни, при нас няма какво да се преглежда, поправя или изтрива. Локалните данни можеш да премахнеш по всяко време, като изтриеш приложението. За данните, които обработват Apple или Google, се обръщай към тях.</p>
 
   <h2>Промени</h2>
   <p>Ако поведението на приложението се промени, ще обновим тази страница и датата по-горе.</p>
 
   <h2>Контакт</h2>
   <p>Въпроси за поверителността и поддръжка: <a href="mailto:contact@serdicastudio.com">contact@serdicastudio.com</a></p>
+  <p class="links"><a href="../support/#bg">Поддръжка</a> · <a href="../">Начална страница</a></p>
 </section>
 
 <section id="en" lang="en">
-  <h1>Privacy Policy – Tablichko</h1>
-  <p class="meta">Last updated: October 13, 2026</p>
+  <h1>Privacy Policy – Times Table Quest</h1>
+  <p class="meta">Last updated: October 30, 2026</p>
 
-  <p>Tablichko is a Bulgarian-language educational app for practising the multiplication tables and division. It is designed so that <strong>we do not collect personal data</strong>: there are no accounts, ads, analytics or tracking.</p>
+  <p>Times Table Quest (in Bulgarian: <em>Табличко</em>, Tablichko) is an educational app for practising the multiplication tables and division, in English and Bulgarian. It is designed so that <strong>we, the developer, do not collect or receive personal data</strong>: there are no accounts, ads, analytics or tracking. Purchases go through the App Store or Google Play, which process their own data under their own rules – explained below.</p>
 
   <h2>In short</h2>
   <ul>
     <li>No sign-up, account or login.</li>
-    <li>No developer-operated backend server.</li>
-    <li>No ads, analytics, tracking, or third-party advertising or analytics services.</li>
-    <li>We do not collect, receive or sell users’ personal data, including from children.</li>
-    <li>Progress is stored only on the device.</li>
+    <li>No developer-operated backend server, and the app does not send data to us.</li>
+    <li>No ads, analytics, tracking, or third-party advertising or analytics services in the app.</li>
+    <li>We do not sell or share users’ data, including children’s data.</li>
+    <li>Progress and the language choice are stored only on the device.</li>
+    <li>The purchase is handled by Apple (iPhone/iPad) or Google (Android). They may process technical and purchase data – see “Purchase” below.</li>
   </ul>
 
   <h2>What is stored on the device</h2>
-  <p>The app’s local storage on your device holds: practice results (counts of correct and wrong answers per example, games played, last play date), the day streak, stars and badges, unlocked tables, the state of the 14-day challenge, division progress, and a flag that the “Full Version” offer has already been shown automatically. The app does not ask for or store a name, email, photos, location or any other identifier. This data is not sent to us or to third parties.</p>
+  <p>The app’s local storage on your device holds: practice results (counts of correct and wrong answers per example, games played, last play date), the day streak, stars and badges, unlocked tables, the state of the 14-day challenge, division progress, the language you chose (Automatic, Български or English), and a flag that the “Full Version” offer has already been shown automatically. The app does not ask for or store a name, email, photos, location or any other identifier. This data is not sent to us or to third parties by the app.</p>
 
-  <h2>“Full Version” purchase and Apple</h2>
-  <p>“Full Version” is a one-time purchase (no subscription) made through Apple In-App Purchase. The purchase, the payment, your Apple ID and your payment details are handled entirely by Apple; we have no access to them. Apple’s terms and privacy policy apply to the purchase itself.</p>
-  <p>Purchase checks (at launch, when the app returns to the foreground, and on “Restore purchase”) are made through Apple StoreKit. The app keeps no copy of the purchase of its own; it only uses what StoreKit provides on the device. We do not receive this data.</p>
-  <p>Data that Apple processes because of the purchase is distinct from data we collect: we collect none. Through App Store Connect Apple gives us aggregated sales and download reports that do not let us identify you. If you have allowed sharing diagnostics with app developers on your device, Apple may provide us aggregated, anonymous crash reports.</p>
+  <h2>The “Full Version” purchase</h2>
+  <p>“Full Version” is a one-time purchase (no subscription). It is made through your platform’s store: <strong>Apple In-App Purchase</strong> on iPhone and iPad, or <strong>Google Play Billing</strong> on Android. The payment, your Apple ID or Google account and your payment details are handled entirely by Apple or Google; we have no access to them. The terms and privacy policies of Apple and Google apply to the purchase itself.</p>
+  <p><strong>iPhone and iPad:</strong> the purchase is checked through Apple StoreKit at launch, when the app returns to the foreground, and on “Restore purchase”. The app keeps no copy of the purchase of its own; it only uses what StoreKit provides on the device.</p>
+  <p><strong>Android:</strong> the app uses the Google Play Billing library. It talks to Google Play on the device to show the price, make the purchase and check it. The app reads the purchase token from Google Play in order to acknowledge the purchase to Google and unlock the Full Version. We do not send this token to a server of ours – we have none – and the purchase is not verified by us anywhere other than on the device.</p>
+  <p><strong>Store telemetry.</strong> Apple and Google operate the stores and their payment libraries. They may process technical and purchase-related data (for example device information, the app version, the state of a purchase and diagnostics) to complete payments, prevent fraud and run their services. That processing is theirs, follows their policies, and we neither control it nor receive that data. This is why we do not claim that “no data at all” is handled – we state that <em>we</em> do not collect or receive personal data from the app.</p>
+  <p>What we do receive: aggregated reports from App Store Connect and Google Play Console (sales, downloads, countries and similar totals) that do not let us identify you. If you have allowed sharing diagnostics with app developers on your device, Apple and Google may give us aggregated, anonymous reports about crashes and performance problems.</p>
 
   <h2>Internet connection</h2>
-  <p>Playing does not need an internet connection, and the app itself sends no data to us. An internet connection is used by Apple StoreKit to show the price, make a purchase and restore a purchase. That communication is between your device and Apple.</p>
+  <p>Playing does not need an internet connection, and the app itself sends no data to us. An internet connection is used by Apple StoreKit or Google Play to show the price, make a purchase and restore a purchase. That communication is between your device and Apple or Google.</p>
 
-  <h2>Deleting your data and uninstalling</h2>
-  <p>The app has no button to reset progress. Deleting the app from the device removes the locally stored progress from the device (iOS deletes an app’s data when it is uninstalled). If you reinstall, you start from scratch. If you use a device backup (for example iCloud Backup), the app’s data may be part of that backup and can return when you restore from it; that is controlled by your Apple settings on the device.</p>
-  <p>The purchase is not deleted with the app: it is tied to your Apple ID. After reinstalling, tap “Restore purchase” (“Възстанови покупка”) to have it checked with Apple.</p>
+  <h2>Backups, deleting your data and uninstalling</h2>
+  <p>The app has no button to reset progress. Deleting the app from the device removes the locally stored progress (on Android you can also clear the app’s “Storage” in Settings). If you reinstall, you start from scratch.</p>
+  <p>If you use a device backup (iCloud Backup on iPhone, or Google’s backup on Android), the app’s data may be part of that backup and can return when you restore from it; that is controlled by your Apple or Google settings on the device, not by us.</p>
+  <p>The purchase is not deleted with the app: it is tied to your Apple ID or Google account. After reinstalling, tap “Restore purchase” to have it checked with the store.</p>
 
   <h2>Children</h2>
-  <p>The app is educational and can be used by children together with a parent or guardian. We do not collect information from children, show ads or share data with third parties. Purchases are made through the Apple account on the device; parents can manage them with Apple’s settings (for example Ask to Buy and Screen Time).</p>
+  <p>The app is educational and can be used by children together with a parent or guardian. We do not collect information from children, show ads or share data with third parties. Purchases are made through the Apple or Google account on the device; parents can manage them with the store’s settings (for example Ask to Buy and Screen Time on Apple devices, or parental controls and purchase approvals in Google Play).</p>
 
   <h2>Your rights</h2>
-  <p>Because we hold no personal data, there is nothing on our side to access, correct or delete. You can remove the local data at any time by deleting the app.</p>
+  <p>Because we hold no personal data, there is nothing on our side to access, correct or delete. You can remove the local data at any time by deleting the app. For data that Apple or Google process, please contact them.</p>
 
   <h2>Changes</h2>
   <p>If the app’s behaviour changes, we will update this page and the date above.</p>
 
   <h2>Contact</h2>
   <p>Privacy questions and support: <a href="mailto:contact@serdicastudio.com">contact@serdicastudio.com</a></p>
+  <p class="links"><a href="../support/#en">Support</a> · <a href="../">Home page</a></p>
 </section>
 </main>
+<script>
+(function () {
+  var langs = ['bg', 'en'];
+  var titles = {
+    bg: 'Политика за поверителност – Табличко',
+    en: 'Privacy Policy – Times Table Quest'
+  };
+  var buttons = document.querySelectorAll('.langs button');
+
+  function saved() {
+    try { return localStorage.getItem('supportLang'); } catch (e) { return null; }
+  }
+  function remember(l) {
+    try { localStorage.setItem('supportLang', l); } catch (e) {}
+  }
+  function initial() {
+    var h = (location.hash || '').replace('#', '');
+    if (langs.indexOf(h) >= 0) return h;
+    var s = saved();
+    if (langs.indexOf(s) >= 0) return s;
+    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    return nav.toLowerCase().indexOf('bg') === 0 ? 'bg' : 'en';
+  }
+  function show(l, fromUser) {
+    langs.forEach(function (x) { document.getElementById(x).hidden = (x !== l); });
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false'); });
+    document.documentElement.lang = l;
+    document.title = titles[l];
+    if (fromUser) {
+      remember(l);
+      if (history.replaceState) history.replaceState(null, '', '#' + l);
+      window.scrollTo(0, 0);
+    }
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { show(b.dataset.set, true); });
+  });
+  window.addEventListener('hashchange', function () {
+    var h = location.hash.replace('#', '');
+    if (langs.indexOf(h) >= 0) show(h, false);
+  });
+  show(initial(), false);
+})();
+</script>
 </body>
 </html>
