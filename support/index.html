@@ -3,60 +3,121 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Табличко – Поддръжка / Support</title>
-<meta name="description" content="Поддръжка за приложението Табличко. Support for the Tablichko app.">
+<title>Табличко / Times Table Quest – Поддръжка / Support</title>
+<meta name="description" content="Поддръжка за приложението Табличко (на английски: Times Table Quest). Support for the Times Table Quest app (in Bulgarian: Табличко).">
 <style>
-  :root { --bg:#fff8e8; --card:#ffffff; --ink:#2b2d42; --muted:#5a5d73; --accent:#1b6ca8; --line:#e6dcc4; }
+  :root { --bg:#fff8e8; --card:#ffffff; --ink:#2b2d42; --muted:#5a5d73; --accent:#1b6ca8; --line:#e6dcc4; --on-accent:#ffffff; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#17181f; --card:#20222c; --ink:#eef0f6; --muted:#aab0c4; --accent:#7ec0f2; --line:#34374a; }
+    :root { --bg:#17181f; --card:#20222c; --ink:#eef0f6; --muted:#aab0c4; --accent:#7ec0f2; --line:#34374a; --on-accent:#10131a; }
   }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--ink);
          font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
   main { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
-  h1 { font-size:1.8rem; margin:.2em 0 .1em; }
+  h1 { font-size:1.8rem; line-height:1.25; margin:.2em 0 .1em; overflow-wrap:anywhere; }
   h2 { font-size:1.2rem; margin:1.6em 0 .3em; }
   section { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:8px 20px 20px; margin:20px 0; }
-  a { color:var(--accent); }
-  .meta { color:var(--muted); font-size:.9rem; }
-  nav { display:flex; gap:12px; margin:8px 0 0; }
-  nav a { padding:6px 12px; border:1px solid var(--line); border-radius:999px; text-decoration:none; background:var(--card); }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+  .lead { color:var(--muted); margin:.2em 0 1em; }
+  .links { margin-top:1.4em; padding-top:.8em; border-top:1px solid var(--line); font-size:.95rem; }
+  .langs { display:flex; flex-wrap:wrap; gap:10px; margin:8px 0 0; }
+  .langs button { font:inherit; font-weight:600; min-height:44px; padding:6px 18px; border:2px solid var(--accent);
+                  border-radius:999px; background:var(--card); color:var(--accent); cursor:pointer; }
+  .langs button[aria-pressed="true"] { background:var(--accent); color:var(--on-accent); }
+  .langs button:focus-visible, a:focus-visible { outline:3px solid var(--ink); outline-offset:2px; }
   li { margin:.3em 0; }
+  ul { padding-left: 1.2em; }
+  /* Without JavaScript both languages are shown one after the other. */
+  .js section[hidden] { display:none; }
 </style>
+<script>document.documentElement.className = 'js';</script>
 </head>
 <body>
 <main>
-<nav aria-label="Language / Език"><a href="#bg">Български</a><a href="#en">English</a><a href="../privacy/">Поверителност / Privacy</a></nav>
+<nav class="langs" aria-label="Език / Language">
+  <button type="button" data-set="bg" aria-pressed="false">Български</button>
+  <button type="button" data-set="en" aria-pressed="false">English</button>
+</nav>
 
 <section id="bg" lang="bg">
   <h1>Поддръжка – Табличко</h1>
+  <p class="lead">Табличко е игра за таблицата за умножение и за деление за деца. В английски вариант приложението се казва <em>Times Table Quest</em> – това е същото приложение.</p>
   <p>Имаш въпрос, проблем или предложение? Пиши ни: <a href="mailto:contact@serdicastudio.com">contact@serdicastudio.com</a></p>
 
   <h2>Чести въпроси</h2>
   <p><strong>Какво е безплатно?</strong><br>Таблицата ×2 в режим „Тренирай“, уводният урок по деление и деление :2 в „Тренирай деление“.</p>
-  <p><strong>Как да купя „Пълна версия“?</strong><br>Докосни заключена таблица или заключен режим (например ×3). Отваря се екранът „Пълна версия“ с предимствата и цената от Apple. Натисни „Отключи Табличко“. Можеш да стигнеш до него и от екрана за родители (иконата горе вдясно на началния екран, после „Виж пълната версия“).</p>
-  <p><strong>Какво отключва покупката?</strong><br>Всички игрови режими, таблицата ×3 и игрите с деление. Покупката не прескача учебния напредък: таблиците ×4–×10 и съответното деление се отключват чрез упражнения в приложението.</p>
-  <p><strong>Как да възстановя покупка?</strong><br>Натисни „Възстанови покупка“ на екрана „Пълна версия“ или в картата „Пълна версия“ на екрана за родители. Използвай същия Apple ID, с който е направена покупката.</p>
-  <p><strong>Платих, но нищо не се е отключило.</strong><br>Натисни „Възстанови покупка“. Ако не помогне, пиши ни на имейла по-горе и опиши какво виждаш.</p>
+  <p><strong>Как да купя „Пълна версия“?</strong><br>Докосни заключена таблица или заключен режим (например ×3). Отваря се екранът „Пълна версия“ с предимствата и цената от магазина – App Store на iPhone и iPad или Google Play на Android, според акаунта и държавата ти. Натисни „Отключи Табличко“. Можеш да стигнеш до него и от екрана за родители (иконата горе вдясно на началния екран, после „Виж пълната версия“). Плащането е еднократно, без абонамент.</p>
+  <p><strong>Какво отключва покупката?</strong><br>Таблиците ×3–×10, всички игрови режими, игрите с деление, всички дни на 14-дневното предизвикателство и подробния прогрес за родителя. Покупката не прескача учебния напредък: таблиците ×4–×10 и съответното деление се отключват чрез упражнения в приложението, едно по едно.</p>
+  <p><strong>Как да възстановя покупка?</strong><br>Натисни „Възстанови покупка“ на екрана „Пълна версия“ или в картата „Пълна версия“ на екрана за родители. Използвай същия Apple ID (iPhone/iPad) или същия Google акаунт (Android), с който е направена покупката.</p>
+  <p><strong>Платих, но нищо не се е отключило.</strong><br>Натисни „Възстанови покупка“. Ако покупката чака одобрение (например от родител в семейна група), приложението се отключва, когато бъде одобрена. На Android потвърждението от Google Play понякога идва със закъснение. Ако нищо не помогне, пиши ни на имейла по-горе и опиши какво виждаш.</p>
   <p><strong>Работи ли без интернет?</strong><br>Да, играта не изисква интернет. Интернет е нужен за цената, покупката и възстановяването.</p>
-  <p><strong>Как да изтрия напредъка?</strong><br>В приложението няма бутон за нулиране. Изтрий приложението от устройството; локалният напредък се премахва. Покупката остава към твоя Apple ID и се възстановява с „Възстанови покупка“.</p>
-  <p><strong>Нужна ли е регистрация?</strong><br>Не. Приложението няма акаунти, реклами и анализи. Виж <a href="../privacy/">Политиката за поверителност</a>.</p>
+  <p><strong>Как да сменя езика?</strong><br>Отвори екрана за родители (иконата горе вдясно на началния екран) и слез до „Език“. Избери „Автоматично“ (според телефона), „Български“ или „English“. Ако телефонът е на друг език, приложението се отваря на английски.</p>
+  <p><strong>Как да изтрия напредъка?</strong><br>В приложението няма бутон за нулиране. Изтрий приложението от устройството; локалният напредък се премахва. Покупката остава към твоя Apple ID или Google акаунт и се възстановява с „Възстанови покупка“.</p>
+  <p><strong>Нужна ли е регистрация?</strong><br>Не. Приложението няма акаунти, реклами и анализи.</p>
+  <p class="links"><a href="../privacy/#bg">Политика за поверителност</a> · <a href="../">Начална страница</a></p>
 </section>
 
 <section id="en" lang="en">
-  <h1>Support – Tablichko</h1>
+  <h1>Support – Times Table Quest</h1>
+  <p class="lead">Times Table Quest is a times table and division game for children. In Bulgarian the app is called <em>Табличко</em> (Tablichko) – it is the same app.</p>
   <p>Have a question, a problem or a suggestion? Write to us: <a href="mailto:contact@serdicastudio.com">contact@serdicastudio.com</a></p>
 
-  <h2>FAQ</h2>
-  <p><strong>What is free?</strong><br>The ×2 table in “Тренирай” (Training), the introductory division lesson, and division :2 in “Тренирай деление” (Training).</p>
-  <p><strong>How do I buy the Full Version?</strong><br>Tap a locked table or a locked game mode (for example ×3). The Full Version screen opens with the benefits and the price from Apple. Tap “Отключи Табличко” (Unlock Tablichko). You can also reach it from the parent screen (the icon at the top right of the home screen, then “Виж пълната версия”).</p>
-  <p><strong>What does the purchase unlock?</strong><br>All game modes, table ×3 and the division games. The purchase does not skip the learning progression: tables ×4–×10 and the matching division are unlocked by practising in the app.</p>
-  <p><strong>How do I restore a purchase?</strong><br>Tap “Възстанови покупка” (Restore purchase) on the Full Version screen or on the “Пълна версия” card of the parent screen. Use the same Apple ID that made the purchase.</p>
-  <p><strong>I paid but nothing unlocked.</strong><br>Tap “Възстанови покупка”. If that does not help, write to the email above and describe what you see.</p>
+  <h2>Frequently asked questions</h2>
+  <p><strong>What is free?</strong><br>The 2 times table in Practice, the introductory division lesson, and dividing by 2 in Division Practice.</p>
+  <p><strong>How do I buy the Full Version?</strong><br>Tap a locked table or a locked game mode (for example the 3 times table). The Full Version screen opens with the benefits and the price from the store – the App Store on iPhone and iPad, or Google Play on Android, based on your account and country. Tap “Unlock Times Table Quest”. You can also get there from the parent screen (the icon at the top right of the home screen, then “See the Full Version”). It is a one-time payment, with no subscription.</p>
+  <p><strong>What does the purchase unlock?</strong><br>The 3 to 10 times tables, all game modes, the division games, every day of the 14-day challenge and the detailed progress for parents. The purchase does not skip the learning steps: the 4 to 10 times tables and the matching division games still unlock one by one through practice in the app.</p>
+  <p><strong>How do I restore a purchase?</strong><br>Tap “Restore purchase” on the Full Version screen, or on the “Full Version” card of the parent screen. Use the same Apple ID (iPhone/iPad) or Google account (Android) that made the purchase.</p>
+  <p><strong>I paid but nothing unlocked.</strong><br>Tap “Restore purchase”. If the purchase is waiting for approval (for example from a parent in a family group), the app unlocks once it is approved. On Android, Google Play’s confirmation can arrive a little late. If nothing helps, write to the email above and tell us what you see.</p>
   <p><strong>Does it work offline?</strong><br>Yes, playing does not need the internet. The internet is needed for the price, the purchase and restoring it.</p>
-  <p><strong>How do I delete progress?</strong><br>The app has no reset button. Delete the app from the device; the local progress is removed. The purchase stays with your Apple ID and is restored with “Възстанови покупка”.</p>
-  <p><strong>Is sign-up required?</strong><br>No. The app has no accounts, ads or analytics. See the <a href="../privacy/">Privacy Policy</a>.</p>
+  <p><strong>How do I change the language?</strong><br>Open the parent screen (the icon at the top right of the home screen) and scroll down to “Language”. Choose “Automatic” (follows the phone), “Български” or “English”. If your phone uses another language, the app opens in English.</p>
+  <p><strong>How do I delete progress?</strong><br>The app has no reset button. Delete the app from the device; the local progress is removed. The purchase stays with your Apple ID or Google account and is restored with “Restore purchase”.</p>
+  <p><strong>Is sign-up required?</strong><br>No. The app has no accounts, ads or analytics.</p>
+  <p class="links"><a href="../privacy/#en">Privacy Policy</a> · <a href="../">Home page</a></p>
 </section>
 </main>
+<script>
+(function () {
+  var langs = ['bg', 'en'];
+  var titles = {
+    bg: 'Поддръжка – Табличко',
+    en: 'Support – Times Table Quest'
+  };
+  var buttons = document.querySelectorAll('.langs button');
+
+  function saved() {
+    try { return localStorage.getItem('supportLang'); } catch (e) { return null; }
+  }
+  function remember(l) {
+    try { localStorage.setItem('supportLang', l); } catch (e) {}
+  }
+  function initial() {
+    var h = (location.hash || '').replace('#', '');
+    if (langs.indexOf(h) >= 0) return h;
+    var s = saved();
+    if (langs.indexOf(s) >= 0) return s;
+    var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    return nav.toLowerCase().indexOf('bg') === 0 ? 'bg' : 'en';
+  }
+  function show(l, fromUser) {
+    langs.forEach(function (x) { document.getElementById(x).hidden = (x !== l); });
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.set === l ? 'true' : 'false'); });
+    document.documentElement.lang = l;
+    document.title = titles[l];
+    if (fromUser) {
+      remember(l);
+      if (history.replaceState) history.replaceState(null, '', '#' + l);
+      window.scrollTo(0, 0);
+    }
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { show(b.dataset.set, true); });
+  });
+  window.addEventListener('hashchange', function () {
+    var h = location.hash.replace('#', '');
+    if (langs.indexOf(h) >= 0) show(h, false);
+  });
+  show(initial(), false);
+})();
+</script>
 </body>
 </html>
